@@ -7,28 +7,26 @@
     <body>
     <?php
         $bdd = new PDO("mysql:host=localhost;dbname=jour08", "root" , "");
-        $requete = $bdd -> query("SELECT  `prenom`, `nom`, `naissance` FROM `etudiants` ORDER BY femme");
-    ?>
+        $requete = $bdd -> query("SELECT  nom, prenom, naissance FROM etudiants where id=2 ");
+       ?>
     <tbody>
-    <table border="3" withe="5px">
+    <table border="3">
     <?php
         while ($resultat = $requete-> fetch())
-        {
+        {  
     ?>
     </tbody>
         <thead>
         <tr>
-           
             <th>Prénom </th>
             <th>Nom</th>
             <th>Naissance</th>
-          
         </tr>
     <thead>
         <tr>
            
-            <td><?php echo $resultat ['prenom']; ?></td>
-            <td><?php echo $resultat['nom'] ; ?></td>
+            <td><?php echo $resultat ['nom']; ?></td>
+            <td><?php echo $resultat['prenom'] ; ?></td>
             <td><?php echo $resultat ['naissance'] ; ?></td>
           
            
