@@ -1,18 +1,10 @@
 
-
-
 <?php
 echo inpu
 gettype($_POST); 
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta charset="utf-8"><title>GET/POST</title>
     </head>
